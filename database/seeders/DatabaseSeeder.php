@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             AuthGuardSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            WalletTypeSeeder::class,
+            WalletSeeder::class,
         ]);
     }
 }

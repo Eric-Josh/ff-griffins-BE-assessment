@@ -1,0 +1,24 @@
+
+Endpoints
+----------
+- User
+	GET 	/users
+	GET		/user/:id
+	POST 	/user
+	PUT 	/user/:id
+	DELETE	/user/:id
+
+- Wallet Types
+	GET 	/wallet-types
+	GET		/wallet-type/:id
+	POST 	/wallet-type
+	PUT 	/wallet-type/:id
+	DELETE	/wallet-type/:id
+
+- Wallet
+	GET 	/wallets
+	GET		/wallet/:id
+	POST 	/wallet
+	PUT 	/wallet/:id
+	DELETE	/wallet/:id
+
