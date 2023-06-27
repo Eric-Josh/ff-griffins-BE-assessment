@@ -27,9 +27,24 @@ Seeded users:
 `email: admin@test, password: Admin@123` 
 `email: user@test, password: User@123`
 
-After login is successfully initiated, a token would be generated which would be used to make API calls to all other endpoint on the system. The API authorization type is Bearer Token.
+After login is successfully initiated, a token would be generated which would be used to make API calls to all other endpoints on the system. The API authorization type is Bearer Token.
 
-When the endpoint: `GET /api/users` is requested, the application will return a list of users from the local database.
+### API Endpoints
+Endpoint that can only be call by an admin user: 
+* `GET /api/users` 
+* `GET /api/user/:id`
+* `GET /api/wallets`
+
+When the endpoint: `GET /api/users` is requested, the application will return a list of users from the database.
 
 When the endpoint: `GET /api/user/:id` is requested with a specific <strong>:id</strong> in the URL, where <strong>:id</strong> is a placeholder variable for an integer. It should show the specific user with all the wallets they own and transaction history.
 
+When the endpoint: `GET /api/wallets` is requested, the application will return a list of wallets from the database.
+
+When the endpoint: `GET /api/wallet/:id` is requested with a specific <strong>:id</strong> in the URL, where <strong>:id</strong> is a placeholder variable for an integer. It should show the specific wallet with its owner, type and balance.
+
+When the endpoint: `POST /api/transfer/wallet` is requested with the following datapoints:
+* fromWalletId
+* toWalletId
+* amount
+a transaction is created in the database and would return details of the transaction with a message prompt to the user.
