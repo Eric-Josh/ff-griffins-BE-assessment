@@ -27,14 +27,17 @@ Seeded users:
 `email: admin@test, password: Admin@123` 
 `email: user@test, password: User@123`
 
+<strong>Request</strong>
+
 ```
-Request:
 {
     "email": "admin@test",
     "password": "Admin@123"
 }
+```
+<strong>Request</strong>
 
-Response:
+```
 {
     "user": {
         "id": 1,
