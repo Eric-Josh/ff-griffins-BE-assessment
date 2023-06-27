@@ -47,4 +47,14 @@ When the endpoint: `POST /api/transfer/wallet` is requested with the following d
 * fromWalletId
 * toWalletId
 * amount
+
+```
+Example:
+{
+    "fromWalletId": "fbfd05d83f2ed64c88785e92",
+    "toWalletId": "db8a43bb03afa4631e39b435",
+    "amount": 20
+}
+```
+
 a transaction is created in the database and would return details of the transaction with a message prompt to the user.
