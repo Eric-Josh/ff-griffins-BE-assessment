@@ -46,3 +46,10 @@ POST  /transfer/wallet
     "toWalletId": "4cca96f2c197712a2742bd33",
     "amount": 30
 }
+
+
+Github: 
+https://github.com/Eric-Josh/ff-griffins-BE-assessment
+
+Postman: 
+https://documenter.getpostman.com/view/15571180/2s93z88iWw
