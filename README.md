@@ -27,6 +27,14 @@ Seeded users:
 `email: admin@test, password: Admin@123` 
 `email: user@test, password: User@123`
 
+```
+Example:
+{
+    "email": "admin@test",
+    "password": "Admin@123"
+}
+```
+
 After login is successfully initiated, a token would be generated which would be used to make API calls to all other endpoints on the system. The API authorization type is Bearer Token.
 
 ### API Endpoints
@@ -57,4 +65,4 @@ Example:
 }
 ```
 
-a transaction is created in the database and would return details of the transaction with a message prompt to the user.
+a transaction is created in the database and would return details of the transaction with a message prompt to the user. It is assumed that `fromWalletId` which is the user sender wallet has a validated walletId, therefore validation only occurs for `toWalletId` and sender wallet balance.

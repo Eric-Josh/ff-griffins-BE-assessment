@@ -52,7 +52,7 @@ class TransactionController extends Controller
         ]);
 
         return response([
-            'message' => 'You transfer of NGN '.$data['amount'].' has been successful. You new balance is NGN '.$transact['fbalance'],
+            'message' => 'You transfer of NGN'.$data['amount'].' has been successful. You new balance is NGN'.$transact['fbalance'],
             'data' => new TransactionResource($transaction)
         ]);
     }
@@ -99,6 +99,10 @@ class TransactionController extends Controller
         $toWalletId = Wallet::where('wallet_tranx_id', $data['toWalletId']);
         if(!$toWalletId->first()) {
             throw new \Exception("Destination wallet ID is invalid.", 1);
+        }
+
+        if(!is_numeric($data['amount']) || is_numeric($data['amount']) && $data['amount'] == 0) {
+            throw new \Exception("Invalid amount.", 1);
         }
 
         $fromWalletId = Wallet::where('wallet_tranx_id', $data['fromWalletId']);
