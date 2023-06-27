@@ -49,4 +49,14 @@ class User extends Authenticatable
     {
         return Auth::user()->getRoleNames();
     }
+
+    public function wallets()
+    {
+        return $this->hasMany(\App\Models\Wallet::class, 'user_id');
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(\App\Models\Transaction::class, 'user_id');
+    }
 }

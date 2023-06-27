@@ -21,7 +21,8 @@ class WalletResource extends JsonResource
             'walletId' => $this->wallet_tranx_id,
             'type' => new WalletTypeResource($this->whenLoaded('type')),
             'balance' => $this->balance,
-            'owner' => new UserResource($this->whenLoaded('user'))
+            'owner' => new UserResource($this->whenLoaded('user')),
+            'createdAt' => $this->created_at,
         ];
     }
 }

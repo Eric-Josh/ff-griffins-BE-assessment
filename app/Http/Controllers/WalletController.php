@@ -51,7 +51,7 @@ class WalletController extends Controller
         if(!$wallet) {
             return response([
                 'message' => 'Wallet not found'
-            ],422);
+            ],404);
         }
 
         return new WalletResource($wallet);

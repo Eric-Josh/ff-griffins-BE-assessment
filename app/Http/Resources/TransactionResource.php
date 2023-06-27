@@ -25,7 +25,8 @@ class TransactionResource extends JsonResource
             'amount' => $this->amount,
             'tranxFee' => $this->tranx_fee,
             'type' => $this->type,
-            'status' => $this->status
+            'status' => $this->status,
+            'tranxDate' => $this->created_at,
         ];
     }
 }

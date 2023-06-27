@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Resources\UserResource;
+use App\Http\Resources\UserTransactionResource;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 
@@ -43,9 +44,15 @@ class UserController extends Controller
 
     public function show($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::where('id', $id)->with(['wallets','transactions'])->first();
 
-        return new UserResource($user);
+        if(!$user) {
+            return response([
+                'message' => 'User not found.'
+            ],404);
+        }
+
+        return new UserTransactionResource($user);
     }
 
     public function update(Request $request, $id)

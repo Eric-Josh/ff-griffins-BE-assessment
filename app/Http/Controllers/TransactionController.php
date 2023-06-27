@@ -67,7 +67,7 @@ class TransactionController extends Controller
         if(!$transaction) {
             return response([
                 'message' => 'Transaction not found'
-            ],422);
+            ],404);
         }
 
         return new TransactionResource($transaction);
