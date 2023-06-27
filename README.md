@@ -27,7 +27,7 @@ Seeded users:
 `email: admin@test, password: Admin@123` 
 `email: user@test, password: User@123`
 
-<strong>Request</strong>
+<strong>Request:</strong>
 
 ```
 {
@@ -35,7 +35,7 @@ Seeded users:
     "password": "Admin@123"
 }
 ```
-<strong>Request</strong>
+<strong>Response:</strong>
 
 ```
 {
