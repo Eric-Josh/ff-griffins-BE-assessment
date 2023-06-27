@@ -46,7 +46,13 @@ class WalletController extends Controller
      */
     public function show(string $id)
     {
-        $wallet = Wallet::findOrFail($id);
+        $wallet = Wallet::where('id', $id)->with(['type','user'])->first();
+
+        if(!$wallet) {
+            return response([
+                'message' => 'Wallet not found'
+            ],422);
+        }
 
         return new WalletResource($wallet);
     }

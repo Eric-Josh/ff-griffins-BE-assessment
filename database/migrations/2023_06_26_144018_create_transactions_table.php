@@ -20,6 +20,7 @@ return new class extends Migration
             $table->float('amount', 17,2)->default(0.00);
             $table->float('tranx_fee', 17,2)->default(0.00);
             $table->float('commission', 17,2)->default(0.00);
+            $table->string('type', 100);
             $table->string('status');
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ class WalletTypeResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'miniBalance' => $this->minimum_balance,
+            // 'miniBalance' => $this->minimum_balance,
             'monthlyInterestRate' => $this->monthly_interest_rate
         ];
     }

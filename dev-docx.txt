@@ -1,5 +1,5 @@
 
-Endpoints
+Endpoints /api
 ----------
 - User
 	GET 	/users
@@ -22,3 +22,27 @@ Endpoints
 	PUT 	/wallet/:id
 	DELETE	/wallet/:id
 
+- Transaction
+	GET /transactions
+	GET /transaction/:id
+	POST /transfer/wallet
+
+	{
+	    "fromWalletId": "249f1d298455a1429cd8377e",
+	    "toWalletId": "4cca96f2c197712a2742bd33",
+	    "amount": 30
+	}
+
+
+Assessment main
+---------------
+GET   /users
+GET   /user/:id
+GET   /wallets
+GET   /wallet/:id
+POST  /transfer/wallet
+{
+    "fromWalletId": "249f1d298455a1429cd8377e",
+    "toWalletId": "4cca96f2c197712a2742bd33",
+    "amount": 30
+}

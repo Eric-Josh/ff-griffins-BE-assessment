@@ -17,6 +17,7 @@ class Transaction extends Model
         'amount',
         'tranx_fee',
         'commission',
+        'type',
         'status'
     ];
 

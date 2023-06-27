@@ -55,6 +55,11 @@ Route::middleware(['auth:sanctum','verified'])->group(function() {
         Route::put('/{id}', [WalletController::class, 'update']);
         Route::delete('/{id}', [WalletController::class, 'delete']);
     });
+
+    // Transaction
+    Route::get('transactions', [TransactionController::class, 'index']);
+    Route::post('transfer/wallet', [TransactionController::class, 'store']);
+    Route::get('transaction/{id}', [TransactionController::class, 'show']);
     
 
     Route::post('logout', [LogoutController::class, 'logout']);
